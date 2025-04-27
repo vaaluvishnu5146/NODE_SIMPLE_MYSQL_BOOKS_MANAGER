@@ -78,7 +78,6 @@ BooksRouter.delete("/delete/:bookId", async (req, res, next) => {
     } else {
         try {
             const [result, fields] = await getConnection().query(`DELETE FROM books WHERE book_id = ${Number(bookId)}`);
-            console.log(result)
             if(result) {
                 return res.status(200).json({
                     message: "Book Successfully Deleted",

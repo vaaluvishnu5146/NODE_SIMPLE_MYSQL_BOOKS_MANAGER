@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Management</title>
+</head>
+<body>
+    <h1>Books Management</h1>
+    <script>
+        fetch(`http://localhost:3000/books/`)
+        .then((response) => response.json())
+        .then((result) => console.log(result))
+        .catch((err) => console.log(err))
+    </script>
+</body>
+</html>
