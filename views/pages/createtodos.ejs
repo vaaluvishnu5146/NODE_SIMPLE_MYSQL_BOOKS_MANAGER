@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../components/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../components/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>Create Todo</h1>
+            <p>A Todo can be a Personal or Professional Task</p>
+        </div>
+    </main>
+
+    <div class="row">
+        <form action="/todos/create" method="post">
+            <div class="form-group">
+                <label for="name">Task Name</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
+                <small id="name" class="form-text text-muted">Provide the Name for your task.</small>
+            </div>
+            <div class="form-group">
+                <label for="description">Task Description</label>
+                <textarea class="form-control" name="description" id="description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="type">Task Type</label>
+                <select class="form-control" id="type" name="type">
+                    <option value="personal">Select one</option>
+                    <option value="personal">Personal</option>
+                    <option value="professional">Professional</option>
+                </select>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <%- include('../components/footer'); %>
+    </footer>
+
+</body>
+
+</html>

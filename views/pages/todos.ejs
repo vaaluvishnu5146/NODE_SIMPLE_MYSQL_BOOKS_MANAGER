@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../components/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>All Todos</h1>
+    <p>List all the Todos</p>
+    <a></a>
+  </div>
+</main>
+
+<div class="row">
+  <% todos.forEach(function(todo){ %>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <%= todo.name %>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+</div>
+
+<footer>
+  <%- include('../components/footer'); %>
+</footer>
+
+</body>
+</html>

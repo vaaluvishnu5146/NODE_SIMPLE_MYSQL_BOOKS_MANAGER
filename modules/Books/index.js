@@ -1,10 +1,11 @@
 const { getConnection } = require('../../config/mysql-connection');
+const { getAllBooks } = require('./Books.services');
 
 const BooksRouter = require('express').Router();
 
 BooksRouter.get("/", async (req, res, next) => {
     try {
-        const [result, fields] = await getConnection().query(`SELECT * FROM books`);
+        const result = await getAllBooks();
         return res.status(200).json({
             message: "Successfull",
             result
